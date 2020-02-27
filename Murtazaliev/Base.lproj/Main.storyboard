@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Murtazaliev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ebl-Rt-Lgp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="wnj-8E-ACL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расписание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYh-6J-KdT">
+                                            <rect key="frame" x="147.5" y="15" width="119" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="DYh-6J-KdT" firstAttribute="centerX" secondItem="wnj-8E-ACL" secondAttribute="centerX" id="8IT-2u-Gjt"/>
+                                        <constraint firstItem="DYh-6J-KdT" firstAttribute="centerY" secondItem="wnj-8E-ACL" secondAttribute="centerY" id="K8D-0Y-SFC"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayCell" rowHeight="53" id="euZ-bs-nUa" customClass="DayTVCell" customModule="Murtazaliev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="82" width="414" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="euZ-bs-nUa" id="AKt-I5-j4f">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="День недели" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-uI-AQl">
+                                                    <rect key="frame" x="154" y="16" width="106.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gjc-uI-AQl" firstAttribute="centerX" secondItem="AKt-I5-j4f" secondAttribute="centerX" id="MZa-aT-zHa"/>
+                                                <constraint firstItem="gjc-uI-AQl" firstAttribute="centerY" secondItem="AKt-I5-j4f" secondAttribute="centerY" id="qQv-bh-4vF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dayTitleLabel" destination="gjc-uI-AQl" id="oS1-n1-OqD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="119" id="ebc-9h-Mua" customClass="TimetableTVCell" customModule="Murtazaliev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="135" width="414" height="119"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebc-9h-Mua" id="zuY-i1-kuS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYX-mt-B42">
+                                                    <rect key="frame" x="167.5" y="8" width="79.5" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="Yd4-f1-CK9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn7-cC-DbJ">
+                                                    <rect key="frame" x="8" y="41" width="398" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Иванова Елена Мирославовна" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVX-A6-MYr">
+                                                    <rect key="frame" x="8" y="86" width="192.5" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="EgM-d5-q3i"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Актовый зал" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3p-ed-HiU">
+                                                    <rect key="frame" x="293" y="86" width="113" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="eg1-uO-tcr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="10.44 - 11.41" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g07-H0-vFJ">
+                                                    <rect key="frame" x="208.5" y="86" width="76.5" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="CAk-eR-Zcl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TVX-A6-MYr" firstAttribute="top" secondItem="jn7-cC-DbJ" secondAttribute="bottom" constant="8" id="1AC-N7-pzM"/>
+                                                <constraint firstItem="jn7-cC-DbJ" firstAttribute="leading" secondItem="zuY-i1-kuS" secondAttribute="leading" constant="8" id="4AZ-Qq-oG1"/>
+                                                <constraint firstAttribute="bottom" secondItem="TVX-A6-MYr" secondAttribute="bottom" constant="8" id="8zf-UF-D8t"/>
+                                                <constraint firstItem="kYX-mt-B42" firstAttribute="centerX" secondItem="zuY-i1-kuS" secondAttribute="centerX" id="Cun-Ch-NV6"/>
+                                                <constraint firstItem="kYX-mt-B42" firstAttribute="top" secondItem="zuY-i1-kuS" secondAttribute="top" constant="8" id="I5A-PD-wUR"/>
+                                                <constraint firstAttribute="trailing" secondItem="r3p-ed-HiU" secondAttribute="trailing" constant="8" id="Kzf-9W-ySI"/>
+                                                <constraint firstItem="r3p-ed-HiU" firstAttribute="leading" secondItem="g07-H0-vFJ" secondAttribute="trailing" constant="8" id="NWL-C9-qiv"/>
+                                                <constraint firstAttribute="trailing" secondItem="jn7-cC-DbJ" secondAttribute="trailing" constant="8" id="Nbx-I6-4vP"/>
+                                                <constraint firstAttribute="bottom" secondItem="g07-H0-vFJ" secondAttribute="bottom" constant="8" id="dvg-Ed-7UX"/>
+                                                <constraint firstItem="TVX-A6-MYr" firstAttribute="leading" secondItem="zuY-i1-kuS" secondAttribute="leading" constant="8" id="e9C-nt-5Cg"/>
+                                                <constraint firstItem="jn7-cC-DbJ" firstAttribute="top" secondItem="kYX-mt-B42" secondAttribute="bottom" constant="8" id="eyK-Gz-LXS"/>
+                                                <constraint firstAttribute="bottom" secondItem="r3p-ed-HiU" secondAttribute="bottom" constant="8" id="kkd-2l-dMq"/>
+                                                <constraint firstItem="g07-H0-vFJ" firstAttribute="leading" secondItem="TVX-A6-MYr" secondAttribute="trailing" constant="8" id="x6J-zf-mBO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="jn7-cC-DbJ" id="oED-jz-nnd"/>
+                                            <outlet property="locationLabel" destination="r3p-ed-HiU" id="5ns-Zl-MLf"/>
+                                            <outlet property="nameLabel" destination="TVX-A6-MYr" id="T98-q0-ddH"/>
+                                            <outlet property="timeLabel" destination="g07-H0-vFJ" id="bgD-NM-zPT"/>
+                                            <outlet property="titleLabel" destination="kYX-mt-B42" id="SwC-rU-gJX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ebl-Rt-Lgp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7GN-JX-c1l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ebl-Rt-Lgp" secondAttribute="bottom" id="EAu-dj-d1c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ebl-Rt-Lgp" secondAttribute="trailing" id="IvY-fv-eae"/>
+                            <constraint firstItem="Ebl-Rt-Lgp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bDH-p2-9zs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ebl-Rt-Lgp" id="ILT-WM-5Nm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="TimeTableItem" representedClassName=".TimeTable" syncable="YES">
+        <attribute name="descriptionTimeTable" optional="YES" attributeType="String"/>
+        <attribute name="endTime" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="place" optional="YES" attributeType="String"/>
+        <attribute name="startTime" optional="YES" attributeType="String"/>
+        <attribute name="teacher" optional="YES" attributeType="String"/>
+        <attribute name="weekDayTimeTable" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="TimeTableItem" positionX="-63" positionY="-18" width="128" height="148"/>
+    </elements>
+</model>
